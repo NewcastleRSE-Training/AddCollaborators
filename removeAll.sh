@@ -25,5 +25,5 @@ fi
 exit 1
 while read line
 do
-  ./addCollaborator.sh ${line}
+  ./removeCollaborator.sh ${line}
 done < collaborators.txt
