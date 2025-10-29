@@ -12,7 +12,7 @@ gh auth login
 addAll.sh collaborators.txt
 ```
 
-see https://docs.github.com/en/rest/collaborators/collaborators?apiVersion=2022-11-28#remove-a-repository-collaborator for creating a script to remove collaborators
+see https://docs.github.com/en/rest/collaborators/collaborators?apiVersion=2022-11-28#remove-a-repository-collaborator for creating a script to remove collaborators - not needed if you [reset the repository](https://github.com/NclRSE-Training/CarpentriesWorkshops/issues/76) 
 
 ### gh auth login looks like this:
 ```
