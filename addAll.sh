@@ -1,5 +1,11 @@
 #!/bin/sh
 
+# CHECK IF ORGANISATION IS SPECIFIED
+if [ $# -lt 1 ]; then
+	echo "Usage: addAll.sh <github_organisation>"
+	exit 1
+fi
+
 # LOG INTO GITHUB
 
 if [ -f gh_token ]
@@ -21,9 +27,9 @@ then
    cat collaborators.txt
 else
    echo -e "Please create a file called collaborators.txt, containing the GitHub login of all the collaborators to be added"
+	exit 1
 fi
-exit 1
 while read line
 do
-  ./addCollaborator ${line}
+  ./addCollaborator ${line} ${1}
 done < collaborators.txt
