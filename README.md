@@ -2,7 +2,8 @@ A bash script to add collaborators to a GitHub repository.
 
 Use this script for Git workshops where a large group should be added as collaborators on a repository to practice pull requests
 
-addCollaborator.sh adds a single user by username
+addCollaborator.sh adds a single user by username - takes 2 arguments: username and organisation
+e.g. `./addCollaborator.sh Robin-Wardle newcastlerse-training`
 addAll.sh calls addCollaborator.sh iterating over a text file 1 username per line
 
 ### Usage
