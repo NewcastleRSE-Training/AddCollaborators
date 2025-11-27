@@ -31,5 +31,5 @@ else
 fi
 while read line
 do
-  ./addCollaborator ${line} ${1}
+  ./addCollaborator.sh ${line} ${1}
 done < collaborators.txt
