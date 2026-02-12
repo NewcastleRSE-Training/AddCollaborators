@@ -1,5 +1,11 @@
 #!/bin/sh
 
+# CHECK IF ORGANISATION IS SPECIFIED
+if [ $# -lt 1 ]; then
+	echo "Usage: addAll.sh <github_organisation>"
+	exit 1
+fi
+
 # LOG INTO GITHUB
 
 if [ -f gh_token ]
