@@ -1,4 +1,11 @@
 #!/bin/sh
 
-gh api --method PUT -H "Accept: application/vnd.github+json2" /repos/NclRSE-Training/countries/collaborators/${1} -f permission='write'
+# Check if fewer than 2 arguments are provided
+if [ $# -lt 2 ]; then
+    echo "Error: At least two command-line arguments are required."
+	 echo "Usage: addcollaborator.sh <github_username> <github_organisation>"
+    exit 1
+fi
 
+echo gh api --method PUT -H "Accept: application/vnd.github+json2" /repos/${2}/countries/collaborators/${1} -f permission='write'
+gh api --method PUT -H "Accept: application/vnd.github+json2" /repos/${2}/countries/collaborators/${1} -f permission='write'
